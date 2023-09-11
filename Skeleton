@@ -1,0 +1,35 @@
+public class Fraction<T> implements INumber<T> {
+	  private int numerator;
+	    private int denominator;
+	    
+	    
+
+	@Override
+	public T plus(T input) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public T minus(T input) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public T divide(T input) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public T multiply(T input) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+		
+	}
