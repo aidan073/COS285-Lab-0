@@ -1,0 +1,45 @@
+public class Fraction implements INumber<Fraction> {
+	
+	 private int numerator;
+	 private int denominator;
+	  
+	public Fraction(int numerator, int denominator) {
+		
+		this.numerator = numerator;
+		this.denominator = denominator;
+		
+	}
+	 
+	public Fraction plus(Fraction input) {
+		
+		this.numerator = this.numerator * input.denominator + input.numerator * this.denominator;
+		this.denominator = this.denominator * input.denominator;
+		return null;
+	}
+
+	public Fraction minus(Fraction input) {
+		
+		this.numerator = this.numerator * input.denominator - input.numerator * this.denominator;
+		this.denominator = this.denominator * input.denominator;
+		return null;
+	}
+
+	public Fraction divide(Fraction input) {
+		
+		this.numerator = this.numerator * input.denominator;
+		this.denominator = this.denominator * input.numerator;
+		return null;
+	}
+
+	public Fraction multiply(Fraction input) {
+		
+		this.numerator = this.numerator * input.numerator;
+		this.denominator = this.denominator * input.denominator;
+		return null;
+	}
+
+	public void print() {
+		System.out.println(numerator + "/" + denominator);
+	}
+
+}
