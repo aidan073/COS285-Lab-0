@@ -9,6 +9,37 @@ public class Fraction implements INumber<Fraction> {
 		this.denominator = denominator;
 		
 	}
+public static Fraction findMax(Fraction[] input) {
+    // Start with the first fraction as the maximum
+    Fraction maxFraction = input[0];
+
+    // Loop through each fraction in the array
+    for (Fraction f : input) {
+        // If the current fraction is greater than maxFraction, update maxFraction
+        if (f.compare(maxFraction) > 0) {
+            maxFraction = f;
+        }
+    }
+
+    // Return the maximum fraction found
+    return maxFraction;
+}
+
+public static Fraction findMin(Fraction[] input) {
+    // Start with the first fraction as the minimum
+    Fraction minFraction = input[0];
+
+    // Loop through each fraction in the array
+    for (Fraction f : input) {
+        // If the current fraction is less than minFraction, update minFraction
+        if (f.compare(minFraction) < 0) {
+            minFraction = f;
+        }
+    }
+
+    // Return the minimum fraction found
+    return minFraction;
+}
 	 
 	public Fraction plus(Fraction input) {
 		
