@@ -1,0 +1,20 @@
+public int getCountGreater(Fraction[] inputArray, Fraction inputFraction) {
+    return getCountGreaterRecursive(inputArray, inputFraction, 0, inputArray.length - 1);
+}
+
+private int getCountGreaterRecursive(Fraction[] inputArray, Fraction inputFraction, int left, int right) {
+    if (left > right) {
+        return 0; // 
+    }
+
+    int middle = left + (right - left) / 2; // Calculate the middle index
+
+    int countLeft = getCountGreaterRecursive(inputArray, inputFraction, left, middle - 1); // Recursively count in the left half
+    int countRight = getCountGreaterRecursive(inputArray, inputFraction, middle + 1, right); // Recursively count in the right half
+
+    // Count fractions greater than the inputFraction in the current middle element
+    int countMiddle = inputArray[middle].compare(inputFraction) == 1 ? right - middle + 1 : 0;
+
+    // add up left, right, and middle
+    return countLeft + countRight + countMiddle;
+}
