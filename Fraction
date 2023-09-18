@@ -2,13 +2,31 @@ public class Fraction implements INumber<Fraction> {
 	
 	 private int numerator;
 	 private int denominator;
-	  
+
+	// Constructor
 	public Fraction(int numerator, int denominator) {
 		
 		this.numerator = numerator;
 		this.denominator = denominator;
 		
 	}
+	// Compares the value of two fractions
+	public int compare(Fraction F) {
+
+		int thisNewNumerator = this.numerator * F.denominator;
+		int FNewNumerator = F.numerator * this.denominator;
+
+		if (thisNewNumerator > FNewNumerator) {
+			return 1;
+		}
+		else if (thisNewNumerator < FNewNumerator) {
+			return -1;
+		}
+		else{
+			return 0;
+		}
+	}
+
 public static Fraction findMax(Fraction[] input) {
     // Start with the first fraction as the maximum
     Fraction maxFraction = input[0];
@@ -40,7 +58,8 @@ public static Fraction findMin(Fraction[] input) {
     // Return the minimum fraction found
     return minFraction;
 }
-	 
+
+	// Add two fractions
 	public Fraction plus(Fraction input) {
 		
 		this.numerator = this.numerator * input.denominator + input.numerator * this.denominator;
@@ -48,6 +67,7 @@ public static Fraction findMin(Fraction[] input) {
 		return null;
 	}
 
+	// Subtract two fractions
 	public Fraction minus(Fraction input) {
 		
 		this.numerator = this.numerator * input.denominator - input.numerator * this.denominator;
@@ -55,6 +75,7 @@ public static Fraction findMin(Fraction[] input) {
 		return null;
 	}
 
+	// Divide two fractions
 	public Fraction divide(Fraction input) {
 		
 		this.numerator = this.numerator * input.denominator;
@@ -62,6 +83,7 @@ public static Fraction findMin(Fraction[] input) {
 		return null;
 	}
 
+	// Multiply two fractions
 	public Fraction multiply(Fraction input) {
 		
 		this.numerator = this.numerator * input.numerator;
@@ -69,6 +91,7 @@ public static Fraction findMin(Fraction[] input) {
 		return null;
 	}
 
+	// Print this fraction
 	public void print() {
 		System.out.println(numerator + "/" + denominator);
 	}
