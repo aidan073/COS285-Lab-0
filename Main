@@ -17,4 +17,5 @@ public class Main {
 		System.out.println("Min Fraction: ");
 		min.print();
 		}
+		int count = getCountGreater(inputArray, inputFraction);
 	}
