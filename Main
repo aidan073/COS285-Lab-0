@@ -6,17 +6,15 @@ public class Main {
 		
 		for(int i=0;i<fractionArray.length;i++) {	
 			fractionArray[i] = new Fraction(i,i+1);
-// Libans Testing for the Min and Max methods
-Fraction max = findMax(fractionArray);
-		Fraction min = findMin(fractionArray);
+		}
+		// Libans Testing for the Min and Max methods
+		Fraction max = Fraction.findMax(fractionArray);
+		Fraction min = Fraction.findMin(fractionArray);
 
 		System.out.println("Max Fraction: ");
 		max.print();
 
 		System.out.println("Min Fraction: ");
 		min.print();
-	}}
 		}
 	}
-}
-
